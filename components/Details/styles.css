@@ -1,0 +1,501 @@
+.container {
+  position: sticky;
+
+  top: 12.8rem;
+  height: 90%;
+  z-index: 10000;
+
+  @media (max-width: 720px) {
+    position: static;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.logo {
+  height: 37px;
+  max-width: 255px;
+  min-width: 45px;
+  padding-right: 7%;
+  @media (max-width: 1000px) {
+    max-width: 180px;
+    height: 25px;
+  }
+  @media (max-width: 500px) {
+    max-width: 170px;
+    height: 29px;
+  }
+  @media (max-width: 340px) {
+    max-width: 140px;
+    height: 24px;
+  }
+}
+.header {
+  display: flex;
+  margin-top: -0.5em;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @media (max-width: 720px) {
+    margin-top: 0;
+  }
+}
+
+.comingSoon {
+  margin-top: 0.5em;
+  @media (max-width: 720px) {
+    margin-top: 0em;
+    margin-left: 0.4em;
+  }
+}
+
+.price {
+ margin-right: 13rem;
+  text-align: right;
+
+  @media (max-width: 720px) {
+    margin-left: 0.4em;
+    text-align: right;
+  }
+}
+
+.yardinfo {
+  display: inline;
+  @media (max-width: 720px) {
+    display: block;
+  }
+}
+
+.yardinfo {
+  display: inline;
+  overflow-y: scroll;
+  @media (max-width: 720px) {
+    display: block;
+  }
+}
+
+.presale {
+  display: inline-block;
+  margin-left: 0.7em;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+
+  @media (max-width: 720px) {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+.description {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  @media (max-width: 720px) {
+    margin-top: 0.5em;
+    order: 3;
+  }
+}
+
+.description.swatchkit p + p {
+  margin-top: 1.35em;
+}
+
+.ingredients {
+  display: flex;
+
+  p + p {
+    margin-top: 0.67em;
+  }
+
+  > div {
+    flex: 1;
+  }
+
+  > div:first-child {
+    padding-right: 1rem;
+  }
+
+  > div:first-child + div:last-child {
+    padding-left: 1rem;
+  }
+}
+
+.colorPicker {
+  @media (max-width: 720px) {
+    margin-top: 1.5em;
+  }
+}
+
+.colorPicker,
+.sizeAdd {
+  margin-bottom: 1.25em;
+}
+
+.sizeAdd {
+  @media (max-width: 720px) {
+    margin-top: -0.5rem;
+
+    &.towels {
+      margin-top: 1.5em;
+    }
+  }
+}
+
+.picker h2 {
+  margin-bottom: 0.5em;
+}
+
+.colorLabel {
+  @media (max-width: 720px) {
+    display: none;
+  }
+}
+
+.picker button {
+  outline: none;
+}
+
+.sizePicker button {
+  display: inline-block;
+  margin-left: -1rem;
+  margin-right: 1rem;
+  padding: 0 1rem;
+  font-size: 1.75rem;
+
+  @media (max-width: 720px) {
+    margin-left: -1.25rem;
+    margin-right: 1.25rem;
+    padding: 0 1.25rem;
+  }
+}
+
+.sizePicker button span {
+  display: inline-block;
+  position: relative;
+}
+
+.sizePicker button span:after {
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: -20%;
+  width: 140%;
+  height: 1.25px;
+  background: currentColor;
+  transform-origin: top left;
+  transform: scaleX(0);
+  transition: transform 0.1s ease-out;
+}
+
+.sizePicker button.active,
+.sizePicker button.unavailable,
+.sizePicker button:hover {
+  opacity: 0.5;
+}
+
+.sizePicker button.active span:after {
+  transform: scaleX(1);
+  transition: transform 0.25s ease-out;
+}
+
+@keyframes fadeOutIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sizePicker button.active {
+  /* transform: scale(1.1); */
+  animation: fadeOutIn 0.35s ease-in-out;
+}
+
+.sizeAdd {
+  @media (max-width: 720px) {
+    margin-bottom: 0;
+  }
+}
+
+.sizesAdd {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-top: -2rem;
+
+  @media (max-width: 720px) {
+    &.towels {
+      justify-content: space-between;
+    }
+  }
+}
+
+.sizesAdd .error {
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.sizesAdd .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.qtySelect {
+  line-height: 1.5em;
+  outline: none;
+
+  @media (max-width: 720px) {
+    font-size: 16px;
+
+    .towels & {
+      max-width: 12em;
+    }
+  }
+}
+
+.swatchkit .secondaryPicker {
+  display: none;
+}
+
+.add {
+  cursor: pointer;
+  margin-left: 7.5rem;
+  padding: 2rem 2rem;
+  color: var(--green);
+
+  .towels & {
+    margin-left: 2rem;
+  }
+
+  &.unavailable {
+    opacity: 0.5;
+    color: var(--grey);
+    cursor: default;
+  }
+
+  @media (max-width: 720px) {
+    margin-left: 5.5rem;
+    .towels & {
+      margin-left: 1rem;
+      margin-right: -2rem;
+    }
+  }
+
+  @media (max-width: 350px) {
+    margin-left: 2rem;
+
+    .towels & {
+      margin-left: 1rem;
+    }
+  }
+
+  &.disabled {
+    opacity: 1;
+    color: inherit;
+    margin-left: 0 !important;
+    padding-left: 0;
+  }
+}
+
+.swatchkit .add {
+  margin-left: 0 !important;
+  padding-left: 0;
+}
+
+.links {
+  @media (max-width: 720px) {
+    order: 4;
+  }
+}
+
+.links a {
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.links .fabricLink {
+  color: var(--green);
+  /* margin-top: 1rem; */
+}
+
+:global .ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+:global .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+:global .ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+:global .ReactModal__Overlay :local .modalContent {
+  transform: translateY(10px);
+  transition: transform 250ms ease-in-out;
+}
+
+:global .ReactModal__Overlay--after-open :local .modalContent {
+  transform: translateY(0);
+}
+
+:global .ReactModal__Overlay--before-close :local .modalContent {
+  transform: translateY(10px);
+}
+
+.modalContent {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 4rem;
+  background: var(--cream);
+  outline: none;
+
+  @media (max-width: 720px) {
+    padding: 2rem;
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 20000;
+  display: flex;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+  padding: 4rem;
+  @media (max-width: 720px) {
+    padding: 0;
+  }
+}
+
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    stroke: currentColor;
+    stroke-width: 0.5;
+  }
+}
+
+.sizeChart {
+  max-width: 540px;
+
+  h1 + *,
+  h2 + * {
+    margin-top: 2.5rem;
+  }
+
+  * + h1,
+  * + h2 {
+    margin-top: 3.5rem;
+  }
+
+  * + h3,
+  p + p {
+    margin-top: 1.35em;
+  }
+
+  h3 {
+    font-size: inherit;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    @media (max-width: 720px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  * + table {
+    margin-top: 2.5rem;
+  }
+
+  table + * {
+    margin-bottom: 2.5rem;
+  }
+
+  td {
+    width: 16.67%;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    text-align: left;
+
+    @media (max-width: 720px) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  td + td {
+    padding-left: 1rem;
+  }
+}
+
+.careAndContent {
+  max-width: 540px;
+  min-width: 360px;
+
+  @media (max-width: 720px) {
+    min-width: 280px;
+  }
+
+  h1 {
+    margin-bottom: 2.5rem;
+  }
+
+  ul,
+  p {
+    margin-top: 1em;
+  }
+
+  ul {
+    list-style: none;
+  }
+}

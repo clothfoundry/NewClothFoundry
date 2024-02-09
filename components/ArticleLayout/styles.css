@@ -1,0 +1,40 @@
+.container {
+  padding-top: 16.8rem;
+  padding-bottom: 16.8rem;
+  width: 80%;
+  max-width: 640px;
+  margin: 0 auto;
+
+  @media (max-width: 720px) {
+    width: 85%;
+    padding-top: 11rem;
+    padding-bottom: 11rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 5rem;
+
+    h1 {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  h2 {
+    font: inherit;
+    font-weight: 200;
+  }
+
+  h2,
+  p {
+    margin-bottom: 1.35em;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+}

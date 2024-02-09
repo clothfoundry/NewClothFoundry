@@ -1,0 +1,203 @@
+.container {
+}
+
+.prod
+{
+  size: 50px;
+  padding-top:30px;
+}
+
+.spaced {
+  padding-top: 4.0rem;
+  height: 800px;
+  background-color:white;
+}
+
+.imageContainer,
+.textContainer {
+  position: relative;
+}
+
+.textContainer {
+  padding: 0 5rem;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: white;
+  }
+
+  h2 {
+    font-weight: 200;
+  }
+
+  @media (max-width: 960px) {
+    padding: 0 3.5rem;
+  }
+
+  @media (max-width: 720px) {
+    padding: 0 2rem;
+  }
+}
+
+.id1273064 {
+  text-align: center;
+}
+
+.id1297679 {
+  z-index: 1;
+}
+
+.id1236771 {
+  z-index: 1;
+}
+
+.id1236778 {
+  z-index: 1;
+}
+
+.id1236781 {
+  z-index: 1;
+}
+
+.id1236784 {
+  z-index: 1;
+}
+
+.motto {
+  text-align: right;
+  z-index: 1;
+}
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 30rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+  @media (max-width: 960px) {
+    padding-top: 15rem;
+    padding-bottom: 0;
+  }
+  @media (max-width: 720px) {
+    padding-top: 25rem;
+    padding-bottom: 5rem;
+    .img-carrucel {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  @media (max-width: 560px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media (max-width: 399px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    justify-content: space-between;
+  }
+  @media (max-width: 350px) {
+    paddnig-top: 15rem;
+    padding-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  img {
+    display: block;
+    width: auto;
+    height: 5rem;
+    @media (max-width: 1099px) {
+      height: 2.8rem;
+    }
+    @media (max-width: 560px) {
+      height: 2.25rem;
+    }
+  }
+
+  > div {
+    margin: 2rem 4rem;
+    @media (max-width: 1099px) {
+      margin: 2rem 3rem;
+    }
+    @media (max-width: 999px) {
+      width: 33%;
+      display: flex;
+      justify-content: center;
+      margin-top: 4rem;
+    }
+    @media (max-width: 560px) {
+      width: 40%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media (max-width: 460px) {
+      width: auto;
+      display: block;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    @media (max-width: 399px) {
+      width: auto;
+      display: block;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  
+  /* WWD */
+  :global #id1520103 {
+    @media (max-width: 999px) {
+      order: 1;
+    }
+  }
+
+  /* Vogue */
+  :global #id1520104 {
+    @media (max-width: 999px) {
+      order: 4;
+    }
+  }
+
+  /* Global Climate Action Summit */
+  :global #id1520105 {
+    img {
+      height: 4.5rem;
+      @media (max-width: 1099px) {
+        height: 3.85rem;
+      }
+      @media (max-width: 560px) {
+        height: 3.5rem;
+      }
+    }
+    @media (max-width: 999px) {
+      order: 3;
+    }
+  }
+
+  /* Fibershed */
+  :global #id1520182 {
+    img {
+      height: 3.47rem;
+      @media (max-width: 1099px) {
+        height: 2.97rem;
+
+        padding-right: 2rem;
+
+ 
+
+      }
+      @media (max-width: 560px) {
+        height: 2.7rem;
+      }
+    }
+    @media (max-width: 999px) {
+      order: 2;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.imageContainer {
+  display: block;
+  position: relative;
+}
+
+/* .imageContainer {
+  opacity: 0;
+}
+
+:global .ready :local .imageContainer {
+  animation: fadeIn 0.75s ease-out, slideIn 0.75s ease-out;
+  animation-delay: .85s, .85s;
+  animation-fill-mode: both, both;
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(15px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ready {
+  opacity: 1;
+}

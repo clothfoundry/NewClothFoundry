@@ -1,0 +1,38 @@
+.container {
+  position: fixed;
+  top: 15rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+
+  @media (max-width: 920px) {
+    top: 12rem;
+  }
+
+  @media (max-width: 568px) {
+    top: 10rem;
+  }
+}
+
+.container > div {
+  transform: translateY(2vw);
+}
+
+.logo {
+  display: block;
+  width: 22vw;
+  min-width: 200px;
+}
+@media (max-width: 1100px) {
+  .logo {
+    max-width: 28rem;
+  }
+}
+@media (max-width: 568px) {
+  .logo {
+    max-width: 24rem;
+  }
+}

@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  padding-top: 16.8rem;
+  padding-bottom: 16.8rem;
+  width: 80%;
+  max-width: 1170px;
+  margin: 0 auto;
+  line-height: 1.5;
+
+  @media (max-width: 960px) {
+    width: 90%;
+  }
+
+  @media (max-width: 720px) {
+    display: block;
+    width: 85%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  h1 {
+    margin-bottom: 5rem;
+  }
+
+  h2 {
+    font: inherit;
+    font-weight: 400;
+  }
+
+  h2,
+  p {
+    margin-bottom: 1.5em;
+    line-height: inherit;
+  }
+}
+
+.textContainer {
+  flex: 1;
+  padding-top: 7.5vw;
+
+  > div:last-child {
+    float: right;
+    max-width: 620px;
+
+    @media (max-width: 720px) {
+      float: none;
+    }
+  }
+}
+
+.imageContainer {
+  width: 35%;
+  margin-left: 7rem;
+  display: block;
+  position: relative;
+
+  @media (max-width: 720px) {
+    width: 70%;
+    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ready {
+  opacity: 1;
+}

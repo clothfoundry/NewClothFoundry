@@ -1,0 +1,39 @@
+.container {
+  max-width: 50em;
+  padding: 8rem;
+
+  h1 {
+    font-family: Circular;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin: 0 0 3rem;
+    opacity: 0.85;
+    color: #a99484;
+  }
+
+  h2 {
+    font-family: Circular;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin: 0 0 1.5rem;
+    opacity: 0.85;
+    color: #a99484;
+  }
+
+  > div {
+    margin: 0 0 3rem;
+  }
+
+  :global .ff-nav {
+    color: var(--green);
+  }
+
+  :global .ff-nav :local span {
+    display: inline-block;
+    margin-right: 2.5rem;
+  }
+}

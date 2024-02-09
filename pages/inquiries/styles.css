@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  padding-top: 16.8rem;
+  padding-bottom: 16.8rem;
+  width: 80%;
+  max-width: 1170px;
+  margin: 0 auto;
+  line-height: 1.5;
+
+  @media (max-width: 960px) {
+    width: 90%;
+  }
+
+  @media (max-width: 720px) {
+    width: 85%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    display: block;
+  }
+
+  h1 {
+    padding-left: 5.4rem;
+    margin-bottom: 5rem;
+    @media (max-width: 720px) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  h2 {
+    font: inherit;
+    font-weight: 400;
+  }
+
+  h2,
+  p {
+    margin-bottom: 1.5em;
+    line-height: inherit;
+  }
+}
+
+.textContainer {
+  flex: 1;
+  padding-top: 5vw;
+  @media (max-width: 720px) {
+    padding-top: 4rem;
+    padding-left: 2rem;
+  }
+
+  a {
+    font-family: var(--ff-circular);
+    text-transform: uppercase;
+    color: var(--green);
+    transition: opacity 0.25s ease-out;
+  }
+
+  a:hover {
+    opacity: 0.5;
+  }
+
+  label,
+  input,
+  textarea {
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  form > div {
+    margin-bottom: 4rem;
+    @media (max-width: 960px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid currentColor;
+    padding: 1.5rem 2rem;
+    @media (max-width: 960px) {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  textarea {
+    height: 10.8em;
+  }
+
+  button[type="submit"] {
+    margin-top: -2rem;
+    margin-left: -2rem;
+    padding: 2rem;
+    color: var(--green);
+
+    @media (max-width: 720px) {
+      display: block;
+      margin: -1rem auto 0;
+    }
+  }
+}
+
+.imageContainer {
+  width: 30%;
+  margin-right: 8rem;
+  display: block;
+  position: relative;
+  @media (max-width: 960px) {
+    margin-right: 4rem;
+  }
+  @media (max-width: 720px) {
+    margin-right: 0;
+    margin-left: -1rem;
+    width: 48%;
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ready {
+  opacity: 1;
+}
